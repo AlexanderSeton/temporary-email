@@ -1,0 +1,14 @@
+.email-list-div {
+    margin: 2%;
+}
+
+.email-list-div > h3 {
+    font-size: 150%;
+}
+
+.email-list {
+    border: 1px solid red;
+    width: 90vw;
+    list-style: none;
+    justify-content: center;
+}

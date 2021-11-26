@@ -24,7 +24,7 @@ const EmailContainer = () => {
 
     const getEmailAddress = async function() {
         console.log("getEmailAddress called"); // testing
-        const response = await fetch("https://api.guerrillamail.com/ajax.php?f=get_email_address&lang=en&agent=user1");
+        const response = await fetch("https://api.guerrillamail.com/ajax.php?f=get_email_address&lang=en&agent=user1&ip=127.0.0.1");
         const data = await response.json();
         setEmailAddress(data.email_addr);
         setSidToken(data.sid_token);

@@ -1,5 +1,6 @@
 import React from "react";
 import EmailItem from "./EmailItem.js";
+import "./static/EmailList.css";
 
 const EmailList = ({emails}) => {
 
@@ -8,9 +9,9 @@ const EmailList = ({emails}) => {
     })
 
     return(
-        <div>
+        <div className="email-list-div">
             <h3>Inbox</h3>
-            <ul>
+            <ul className="email-list">
                 {listItems}
             </ul>
         </div>
