@@ -1,0 +1,23 @@
+.email-address-display {
+    border-bottom: 1px black dotted;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    align-items: center;
+    font-size: 120%;
+}
+
+.email-address-display > h3 {
+    /* border: 1px solid black; */
+    width: fit-content;
+    min-width: fit-content;
+    padding: 0.5%;
+}
+
+.email-address-display > p {
+    /* border: 1px solid black; */
+    width: fit-content;
+    min-width: fit-content;
+    padding: 0.5%;
+}
+
