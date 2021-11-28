@@ -43,7 +43,7 @@ const EmailContainer = () => {
             setNumberEmails(emailsList.length);
         } else if (numberEmails === emailsList.length) {
             console.log("no new emails"); // testing
-            alert("No new emails.");
+            alert("No new emails.\nEmails may take a few minutes to show up.");
             return;
         } else {
             console.log("update emails"); // testing
@@ -54,7 +54,7 @@ const EmailContainer = () => {
 
     return(
         <div>
-            <EmailHeader emailAddress={emailAddress} />
+            {emails !== [] ? <EmailHeader emailAddress={emailAddress} /> : null}
             <EmailList emails={emails} getEmailList={getEmailList} />
         </div>
     )

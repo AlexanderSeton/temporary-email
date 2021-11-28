@@ -5,6 +5,7 @@ const EmailHeader = ({emailAddress}) => {
 
     const handleCopyClick = function() {
         navigator.clipboard.writeText(emailAddress);
+        // alert("Email address copied to your clipboard.");
     }
 
     return(
