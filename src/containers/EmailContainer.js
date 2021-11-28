@@ -9,6 +9,7 @@ const EmailContainer = () => {
     const [emailAddress, setEmailAddress] = useState("");
     const [sidToken, setSidToken] = useState("");
     const[emails, setEmails] = useState([]);
+    const[numberEmails, setNumberEmails] = useState(0);
 
     useEffect(() => {
         getEmailAddress();
@@ -34,13 +35,26 @@ const EmailContainer = () => {
         console.log("getEmailList called", emailAddress, sidToken); // testing
         const response = await fetch(`https://api.guerrillamail.com/ajax.php?f=get_email_list&offset=0&agent=user1&sid_token=${sidToken}`);
         const data = await response.json();
-        setEmails(data.list);
+        const emailsList = data.list;
+        console.log("emailsList:", emailsList);
+        if (numberEmails === 0) {
+            console.log("initial num emails 0");
+            setEmails(emailsList);
+            setNumberEmails(emailsList.length);
+        } else if (numberEmails === emailsList.length) {
+            console.log("no new emails");
+            return;
+        } else {
+            console.log("update emails");
+            setEmails(emailsList);
+            setNumberEmails(emailsList.length);
+        }
     }
 
     return(
         <div>
             <EmailHeader emailAddress={emailAddress} />
-            <EmailList emails={emails} />
+            <EmailList emails={emails} getEmailList={getEmailList} />
         </div>
     )
 }

@@ -7,8 +7,29 @@
 }
 
 .email-list {
-    border: 1px solid red;
-    width: 90vw;
+    /* border: 2px solid red; */
+    width: 100%;
     list-style: none;
     justify-content: center;
+    padding-left: 0;
+}
+
+.inbox-refresh {
+    margin-top: 3%;
+    border: 2px black solid;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inbox-refresh > h3 {
+    font-size: 155%;
+    margin: 1%;
+}
+
+.inbox-refresh > button {
+    font-size: 125%;
+    margin: 1%;
+    border: 1px solid black;
 }
