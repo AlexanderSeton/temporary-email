@@ -16,11 +16,11 @@
   vertical-align: middle;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 100s linear;
   }
-} */
+}
 
 .App-header {
   display: flex;

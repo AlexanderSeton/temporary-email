@@ -38,14 +38,15 @@ const EmailContainer = () => {
         const emailsList = data.list;
         console.log("emailsList:", emailsList);
         if (numberEmails === 0) {
-            console.log("initial num emails 0");
+            console.log("initial num emails 0"); // testing
             setEmails(emailsList);
             setNumberEmails(emailsList.length);
         } else if (numberEmails === emailsList.length) {
-            console.log("no new emails");
+            console.log("no new emails"); // testing
+            alert("No new emails.");
             return;
         } else {
-            console.log("update emails");
+            console.log("update emails"); // testing
             setEmails(emailsList);
             setNumberEmails(emailsList.length);
         }
