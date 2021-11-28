@@ -22,3 +22,18 @@
     padding: 0.5%;
 }
 
+#copy-button {
+    margin: 1%;
+    font-size: 80%;
+}
+
+#copy-button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+}
+
+#copy-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

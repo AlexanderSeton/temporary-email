@@ -47,3 +47,27 @@
   }
 }
 
+.dark-mode {
+  background-color: black;
+  filter: invert(100%);
+}
+
+.dark-mode-button {
+  font-size: 100%;
+  margin: 1%;
+  border: 1px solid black;
+  margin-left: 55%;
+  width: 6%;
+  border-radius: 35%;
+}
+
+.dark-mode-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+}
+
+.dark-mode-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
